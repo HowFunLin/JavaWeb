@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+	<script typfunctione="text/javascript">
+		function noArgsFunc()
+		{
+			alert("NoArgsFunc is called");
+		}
+		
+		//noArgsFunc();
+		
+		function argsFunc(a, b)
+		{
+			alert("a = " + a + ", b = " + b);
+		}
+		
+		//argsFunc(150, 100);
+		
+		function sum(a, b)
+		{
+			return a + b;
+		}
+		
+		//alert( sum(150, 50) );
+		
+		var sum = function()
+		{
+			alert("NoArgsSum");
+		};
+		
+		/*
+		//前面var关键字定义函数使得同名函数无法再被重写
+		function sum()
+		{
+			for(var i = 0; i < arguments.length; i++)
+			{
+				alert(arguments[i]);
+			}
+		}
+		
+		sum(1, 1);
+		*/
+		
+		function show()
+		{
+			var result = 0;
+			
+			for(var i = 0; i < arguments.length; i++)
+			{
+				alert(arguments[i]);
+			}
+			
+			for(var i = 0; i < arguments.length; i++)
+			{
+				if(typeof(arguments[i]) == "number")
+				{
+					result += arguments[i];
+				}
+			}
+			
+			return result;
+		}
+		
+		//alert(show(1, "abc", 2));
+	</script>
+</head>
+
+<body>
+</body>
+</html>

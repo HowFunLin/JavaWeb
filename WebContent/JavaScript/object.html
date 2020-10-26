@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Object</title>
+	<script type="text/javascript">
+		var lin = new Object();
+		lin.age = 18;
+		lin.name = "Lin";
+		lin.fun = function()
+		{
+			alert("Lin's age is " + this.age);
+		}
+		
+		//alert(lin.age);
+		//lin.fun();
+		
+		var howfun = {
+			age: 19,
+			fun: function()
+			{
+				alert("Howfun's age is " + this.age);
+			}
+		}
+		
+		alert(howfun.age);
+		howfun.fun();
+	</script>
+</head>
+
+<body>
+</body>
+</html>
